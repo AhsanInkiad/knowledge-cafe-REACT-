@@ -53,3 +53,41 @@
     line-height: 20%;
     color: #111111;
 }
+
+.publish-date {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20%;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.read-time {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.blog-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 140%;
+    color: #111111;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mark-btn {
+    background-color: white;
+    color: #111111;
+    margin-top: 20px;
+    padding: 0px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    border: none;
+    color: #6047EC;
+}

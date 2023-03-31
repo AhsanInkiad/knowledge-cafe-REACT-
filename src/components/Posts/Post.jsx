@@ -15,19 +15,19 @@ const Post = (props) => {
                     <img className='author-er-pic' src={props.blog.pic} alt="" />
                     <div>
                         <p className='name-of-author'>{props.blog.authorname}</p>
-                        <p>{props.blog.publishdate}</p>
+                        <p className='publish-date'>{props.blog.publishdate}</p>
                     </div>
                 </div>
                 <div className='read-time-bookmark'>
                     <div className='read-n-btn'>
-                        <p>{props.blog.readtime} min read </p>
+                        <p className='read-time'>{props.blog.readtime} min read </p>
                         <button className='bookmark-btn'><FontAwesomeIcon icon={faBookmark} /></button>
                     </div>
 
                 </div>
             </div>
-            <p>{props.blog.blogtitle}</p>
-
+            <p className='blog-title'>{props.blog.blogtitle} </p>
+            <button className='mark-btn'><u className='inside-btn'>Mark as read</u></button>
 
 
         </div>
