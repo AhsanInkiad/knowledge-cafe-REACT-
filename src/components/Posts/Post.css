@@ -99,3 +99,12 @@
 .mark-btn:hover{
     color: #111111;
 }
+
+@media only screen and (max-width: 600px) {
+    .blog-title{
+        font-size: 30px;
+    }
+    .name-of-author{
+        font-size: 20qpx;
+    }
+  }

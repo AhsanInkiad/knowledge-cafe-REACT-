@@ -19,3 +19,14 @@
     margin-bottom: 30px;
     margin-right: 330px;
 }
+@media only screen and (max-width: 600px) {
+    .blog-container{
+        display: block;
+        margin-bottom: 20px;
+        
+    }
+    .qa-container{
+        display: block;
+        margin: 10px;
+    }
+  }
