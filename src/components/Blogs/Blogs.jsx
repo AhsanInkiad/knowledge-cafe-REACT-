@@ -7,6 +7,7 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     const [ftime, setTime] = useState(0);
     const [bookmark, setBookmark] = useState([]);
+    const [titles, setTitles] = useState([]);
 
     useEffect(() => {
         fetch('blogs.json')
@@ -14,9 +15,11 @@ const Blogs = () => {
         .then(data => setBlogs(data))
     }, [])
 
-    const bookMarked = (id) => {
+    const bookMarked = (id,blogtitles) => {
         const newbookmark = [...bookmark,id];
+        const newtitles = [...titles,blogtitles]
         setBookmark(newbookmark);
+        setTitles(newtitles);
 
     }
     const readingTime = (time) => {
@@ -33,6 +36,7 @@ const Blogs = () => {
                         readingTime={readingTime}
                         bookMarked={bookMarked}
                         
+                        
 
                     ></Post>)
                 }
@@ -41,7 +45,8 @@ const Blogs = () => {
                 <div className='some-details'>
                     <Sidebar
                         totalTime={ftime}
-                        bookmark={bookmark}></Sidebar>
+                        bookmark={bookmark}
+                        titles={titles}></Sidebar>
                 </div>
 
             </div>

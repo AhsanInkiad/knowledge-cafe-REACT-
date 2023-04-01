@@ -23,7 +23,7 @@ const readingTime = props.readingTime;
                 <div className='read-time-bookmark'>
                     <div className='read-n-btn'>
                         <p className='read-time'>{props.blog.readtime} min read </p>
-                        <button className='bookmark-btn'  onClick={() => bookMarked(props.blog.id)}><FontAwesomeIcon icon={faBookmark} /></button>
+                        <button className='bookmark-btn'  onClick={() => bookMarked(props.blog.id, props.blog.blogtitle)}><FontAwesomeIcon icon={faBookmark} /></button>
                     </div>
 
                 </div>
