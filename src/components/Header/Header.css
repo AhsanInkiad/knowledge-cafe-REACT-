@@ -11,8 +11,8 @@
     border-radius: 50%;
 }
 .title {
-    font-style: normal;
-    font-weight: 700;
+    font-family: 'Exo 2';
+    font-style: normal;  
     font-size: 40px;
     line-height: 160%;
     color: #111111;

@@ -5,7 +5,7 @@ const Qa = (props) => {
     return (
         <div className='qa-contain'>
             <p className='questions'>{props.q.question}</p>
-            <p>{props.q.answer}</p>
+            <p className='answers'>{props.q.answer}</p>
         </div>
     );
 };
