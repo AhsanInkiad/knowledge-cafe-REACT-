@@ -2,4 +2,9 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 60px;
+    position: relative;
+}
+.some-details{
+    position: sticky;
+    top: 5px;
 }

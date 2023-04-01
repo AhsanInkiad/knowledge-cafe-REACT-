@@ -6,6 +6,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Post = (props) => {
 
+const readingTime = props.readingTime;
 
     return (
         <div className='post-container'>
@@ -27,7 +28,7 @@ const Post = (props) => {
                 </div>
             </div>
             <p className='blog-title'>{props.blog.blogtitle} </p>
-            <button className='mark-btn'><u className='inside-btn'>Mark as read</u></button>
+            <button className='mark-btn' onClick={() => readingTime(props.blog.readtime)}><u className='inside-btn'>Mark as read</u></button>
 
 
         </div>
