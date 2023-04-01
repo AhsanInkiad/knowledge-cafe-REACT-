@@ -45,6 +45,9 @@
     border: none;
 
 }
+.bookmark-btn:hover{
+    color: #6047EC;
+}
 
 .name-of-author {
     font-style: normal;
@@ -90,4 +93,8 @@
     line-height: 24px;
     border: none;
     color: #6047EC;
+}
+
+.mark-btn:hover{
+    color: #111111;
 }
