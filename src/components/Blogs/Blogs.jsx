@@ -3,6 +3,9 @@ import './Blogs.css';
 import Post from '../Posts/Post';
 import Sidebar from '../Sidebar/Sidebar';
 import Qa from '../QA/Qa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Blogs = () => {
 
     const [blogs, setBlogs] = useState([]);
@@ -10,7 +13,9 @@ const Blogs = () => {
     const [bookmark, setBookmark] = useState([]);
     const [titles, setTitles] = useState([]);
     const [qa, setQa] = useState([]);
-
+    const notify = () => toast.info('You Have Already Bookmarked This Blog!', {
+        position: toast.POSITION.TOP_RIGHT
+    });;
     useEffect(() => {
         fetch('blogs.json')
             .then(res => res.json())
@@ -23,10 +28,19 @@ const Blogs = () => {
     }, [])
 
     const bookMarked = (id, blogtitles) => {
+        if(bookmark.find(element => element == id)){
+            toast.info('You Have Already Bookmarked This Blog !', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        }
         const newbookmark = [...bookmark, id];
-        const newtitles = [...titles, blogtitles]
+        const newtitles = [...titles, blogtitles];
+        
         setBookmark(newbookmark);
         setTitles(newtitles);
+    
+        
+        
 
     }
     const readingTime = (time) => {
