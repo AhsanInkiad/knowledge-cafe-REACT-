@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "question":"Props vs State",
+      "answer":"We pass data from a parent component to a child component by using props. They are immutable. We can think of it as the inputs to a component.State is used to store data that can later be modified by the component. In summary, props are used to pass data through parent to a child component, and by state we manage data that can change inside a component."
+    },
+    {
+      "id": 2,
+      "question":"How does useState work?",
+      "answer":"We use useState instead of using variable, because when a change is made in variable, react js do not recognize that. So we use useState as it reRenders the DOM, and thus react can recognize the difference."
+    },
+    {
+      "id": 3,
+      "question":"Purpose of useEffect other than fetching data.",
+      "answer":"We can manage sideeffects using this. Such as: We can use it for eventListener. Moreover it has various uses beyond fetching data."
+    },
+    {
+      "id": 4,
+      "question":"How Does React work",
+      "answer":"React is a JavaScript library. It allows us to build user interfaces. Here data flows in one-way. Some keywords that always get used in React is: Components, Virtual DOM, Reconcilliation,Hooks etc."
+    }
+  ]

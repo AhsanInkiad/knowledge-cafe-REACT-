@@ -8,3 +8,14 @@
     position: sticky;
     top: 10px;
 }
+
+.qa-container{
+    border: 1px solid black;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-right: 330px;
+}
