@@ -47,6 +47,7 @@ const Blogs = () => {
         setTime(ftime + time);
     }
 
+
     return (
         <div>
             <div className='blog-container'>
@@ -63,6 +64,7 @@ const Blogs = () => {
                 <div>
                     <div className='some-details'>
                         <Sidebar
+                            
                             totalTime={ftime}
                             bookmark={bookmark}
                             titles={titles}></Sidebar>
@@ -71,10 +73,12 @@ const Blogs = () => {
             </div>
 
             <div className='qa-container'>
+            
             {
                         qa.map(q => <Qa
                             key={q.id}
-                           q={q}
+                            
+                            q={q}
                             
                         ></Qa>)
                     }
