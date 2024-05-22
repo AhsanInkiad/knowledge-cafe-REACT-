@@ -5,7 +5,7 @@ const Sidebar = (props) => {
     const totalTime = props.totalTime;
     const bookmark = props.bookmark;
     const titles = props.titles;
-    console.log(titles);
+    console.log(props);
 
     return (
         <div className='side-bar'>
@@ -15,7 +15,11 @@ const Sidebar = (props) => {
             <div className='bookmarked-blogs'>
                 <p className='heading'>Bookmarked Blogs: {bookmark.length} </p>
                 {titles.map(title =>
-                    <p className='box'>{title}</p> 
+                    <div>
+                        <p className='box'>{title}</p>
+                        <button>remove</button>
+                    </div>
+
                 )
                 }
             </div>

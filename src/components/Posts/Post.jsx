@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Post.css';
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,8 +7,16 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Post = (props) => {
     const bookMarked = props.bookMarked;
-
     const readingTime = props.readingTime;
+
+    const [isBooked, setBooked] = useState(false);
+    const handleClick = () => {
+        if (isBooked == false) {
+            setBooked(!isBooked);
+        }
+
+        bookMarked(props.blog.id, props.blog.blogtitle);
+    }
 
     return (
         <div className='post-container'>
@@ -24,7 +32,7 @@ const Post = (props) => {
                 <div className='read-time-bookmark'>
                     <div className='read-n-btn'>
                         <p className='read-time'>{props.blog.readtime} min read </p>
-                        <button className='bookmark-btn' onClick={() => bookMarked(props.blog.id, props.blog.blogtitle)}><FontAwesomeIcon icon={faBookmark} /></button>
+                        <button className={`bookmark-btn ${isBooked ? 'clicked' : ''}`} onClick={handleClick}> <FontAwesomeIcon icon={faBookmark} /> </button>
                     </div>
 
                 </div>

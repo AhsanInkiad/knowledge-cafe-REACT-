@@ -28,19 +28,21 @@ const Blogs = () => {
     }, [])
 
     const bookMarked = (id, blogtitles) => {
-        if(bookmark.find(element => element == id)){
+        if (bookmark.find(element => element == id)) {
             toast.info('You Have Already Bookmarked This Blog !', {
                 position: toast.POSITION.TOP_RIGHT
             });
+        } else {
+            const newbookmark = [...bookmark, id];
+            const newtitles = [...titles, blogtitles];
+
+            setBookmark(newbookmark);
+            setTitles(newtitles);
         }
-        const newbookmark = [...bookmark, id];
-        const newtitles = [...titles, blogtitles];
-        
-        setBookmark(newbookmark);
-        setTitles(newtitles);
-    
-        
-        
+
+
+
+
 
     }
     const readingTime = (time) => {
@@ -64,7 +66,7 @@ const Blogs = () => {
                 <div>
                     <div className='some-details'>
                         <Sidebar
-                            
+
                             totalTime={ftime}
                             bookmark={bookmark}
                             titles={titles}></Sidebar>
@@ -73,15 +75,15 @@ const Blogs = () => {
             </div>
 
             <div className='qa-container'>
-            
-            {
-                        qa.map(q => <Qa
-                            key={q.id}
-                            
-                            q={q}
-                            
-                        ></Qa>)
-                    }
+
+                {
+                    qa.map(q => <Qa
+                        key={q.id}
+
+                        q={q}
+
+                    ></Qa>)
+                }
             </div>
 
         </div>
